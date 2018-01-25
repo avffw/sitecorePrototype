@@ -195,9 +195,10 @@
     FLEX
 ====================================
 */
-@mixin flex ($flow: row no-wrap, $justify: center, $align: center){
+@mixin flex ($direction: row, $wrap: nowrap, $justify: center, $align: center){
     display: flex;
-    flex-flow:$flow;
+    flex-direction:$direction;
+    flex-wrap:$wrap;
     justify-content: $justify;
     align-items: $align;
 }

@@ -1,6 +1,8 @@
 header{
 
-    @include build-box(100%,auto);
-    @include flex(column);
+    @include build-box(100%, 50vh);
+    @include flex(column, nowrap, space-between);
+
+    background-image: url("../../../images/bg/header_background.png")
 
 }

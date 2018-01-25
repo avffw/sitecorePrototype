@@ -1,0 +1,16 @@
+nav {
+    @include build-box(100%, auto);
+    @include flex(row space-around);
+}
+.links{
+    text-transform: uppercase;
+    &__container{
+        @include build-box(auto, auto);
+        ul{
+
+            @include flex;
+            border: 1px solid black;
+        }
+
+    }
+}
