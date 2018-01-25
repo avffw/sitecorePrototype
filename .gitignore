@@ -2,3 +2,6 @@ node_modules
 .sass-cache
 .DS_Store
 app/styles/styles.css
+.idea
+.idea/*
+dist

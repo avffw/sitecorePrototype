@@ -1,0 +1,13 @@
+.slideshow{
+    @include build-box($slideshow-width, $slideshow-height);
+    text-align: center;
+    &__container{
+        @include flex(column);
+    }
+}
+.circle{
+    @include build-box(10px,10px);
+    @include border-radius(50%);
+    border: 1px solid black;
+
+}

@@ -1,0 +1,6 @@
+header{
+
+    @include build-box(100%,auto);
+    @include flex(column);
+
+}
