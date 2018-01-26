@@ -1,15 +1,19 @@
 nav {
     @include build-box(100%, auto);
-    @include flex(row space-around);
+    @include flex(row,nowrap, space-around);
 }
 .links{
     text-transform: uppercase;
     &__container{
-        @include build-box(auto, auto);
-        ul{
 
+        ul {
             @include flex;
-            border: 1px solid black;
+            justify-content: flex-end;
+            li {
+                margin: 0 10px;
+                @include default-link;
+            }
+
         }
 
     }

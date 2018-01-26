@@ -1,0 +1,64 @@
+
+.team-members {
+    &__container {
+        @include flex(row, wrap);
+    }
+
+}
+
+.team {
+    &__title{
+        &__wrap{
+            @include flex(column);
+
+            * {
+                margin: 8px 0;
+            }
+
+        }
+    }
+    &__container {
+        @include flex;
+        background-image: url("../../../images/bg/team_bg.png");
+        min-height: 600pt;
+    }
+    &__wrap {
+        @include flex(column);
+        justify-content: space-evenly;
+        height: 100%;
+
+        h1 {
+            @include default-header;
+            text-transform: uppercase;
+        }
+        h3 {
+            @include default-header;
+            font-family: $font-subtitle;
+            font-size: 0.8em;
+        }
+    }
+
+    &__member {
+        @include flex(column);
+        margin: 10px;
+        border: 0.1px solid white;
+        &__description {
+            @include flex(column);
+            min-height: 100px;
+            h1 {
+                margin-bottom: 5px;
+                @include default-header;
+                font-family: $font-link;
+                font-size: 0.9em;
+            }
+            h2 {
+                margin-top: 5px;
+                @include default-header;
+                font-family: $font-paragraph;
+                font-size: 0.6em;
+
+            }
+        }
+    }
+
+}

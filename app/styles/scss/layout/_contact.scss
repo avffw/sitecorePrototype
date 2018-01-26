@@ -1,0 +1,93 @@
+
+
+.contact-container{
+
+    @include flex;
+    align-items: flex-start;
+
+    margin-right: $contact-section-gutter;
+    min-height: 600pt;
+    padding-top: 5%;
+}
+
+/*start form*/
+
+.contact-form{
+    @include flex(column);
+    align-items: flex-start;
+    justify-content: space-between;
+
+    height: 512pt;
+    margin: 0 $contact-section-gutter;
+
+    h1{
+        @include default-header;
+        margin: 0;
+    }
+}
+form{
+    @include flex(column);
+    align-items: flex-start;
+    /*  border: 1px solid black;*/
+    height: 402pt;
+
+}
+input{
+    padding-left: 20px;
+    margin:5px 0;
+
+    width: 440pt;
+    height: 44pt;
+
+    text-align: left;
+    border: 0.1pt solid #e5e5e5;
+    &:nth-child(4){
+        height: 200pt;
+
+    }
+    &::placeholder{
+        color:$placeholder-color;
+        text-transform: capitalize;
+
+
+
+    }
+
+}
+textarea{
+    @extend input;
+    padding-top: 15px;
+    overflow:auto;
+    resize: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+/*end form*/
+.sponsors{
+
+    @extend .contact-form;
+    height: 460pt;
+}
+.sponsor-gallery{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    height:410pt;
+    width:362pt;
+
+
+
+
+    max-width: calc((#{$sponsor-image-width} + #{$sponsor-image-gutter}*2)*2);
+}
+.sponsor-image{
+    /* width: $sponsor-image-width;
+     height: $sponsor-image-height;*/
+    /*@include alternate($gallery-colors);*/
+    margin: $sponsor-image-gutter;
+
+}
+
+

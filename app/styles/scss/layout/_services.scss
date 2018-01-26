@@ -1,0 +1,42 @@
+.services{
+    @include flex;
+    &__container{
+        @include flex(column);
+        h1 {
+            @include default-header;
+        }
+        h4 {
+            @include default-header;
+            font-family: "Montserrat Light", sans-serif;
+            font-size: 0.8em;
+        }
+    }
+    &__list {
+        width: 100%;
+        @include flex(row, wrap);
+        flex-wrap: wrap;
+        /*border: 1px solid saddlebrown;*/
+    }
+}
+.service {
+    width: 28%;
+    @include flex(column);
+    margin: 10px 20px;
+
+    /*border: 1px solid saddlebrown;*/
+    h1 {
+        @include default-header;
+        font-family: "Montserrat Light", sans-serif;
+        font-size: 0.9em;
+
+    }
+    p {
+        @include default-paragraph;
+        color: $paragraph-color;
+        text-align: center;
+
+    }
+    * {
+        margin: 10px 0;
+    }
+}

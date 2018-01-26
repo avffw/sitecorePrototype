@@ -1,0 +1,20 @@
+.video{
+    &__container{
+        background-image: url("../../../images/bg/video_bg.png");
+        @include flex(column);
+        position: relative;
+    }
+    &__icon{
+        *{
+            cursor: pointer;
+        }
+        @include flex(column);
+        position: absolute;
+        z-index: 2;
+        h3{
+            margin-top: 25px;
+            @include default-header;
+            font-family: $font-regular;
+        }
+    }
+}

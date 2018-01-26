@@ -1,0 +1,50 @@
+
+
+.portfolio-container{
+    @include flex(column, nowrap, space-around);
+    padding: 0;
+}
+.section__row{
+    @include flex;
+    width: 100%;
+    min-height: 150px;
+    h1,p{
+        width: 49%;
+    }
+}
+.gallery{
+    width: 100%;
+    @include flex;
+    flex-wrap: wrap;
+
+}
+.gallery__item{
+    width:16% ;
+    height: 250px;
+    @include alternate($gallery-colors)
+}
+.title__wrap{
+    width: 50%;
+    @include flex;
+    @include default-header;
+    font-size: 0.9em;
+}
+.link__wrap{
+    @include flex;
+    @include default-link;
+    text-transform: none;
+    text-align: center;
+    width: 50%;
+
+    a{
+        width: auto;
+        cursor: pointer;
+    }
+    img{
+        cursor: pointer;
+        margin-top: 1px;
+        margin-left: 5px;
+        width:5px;
+        height:10px;
+    }
+}

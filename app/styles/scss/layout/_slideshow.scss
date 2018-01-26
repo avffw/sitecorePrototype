@@ -1,13 +1,53 @@
-.slideshow{
+.slideshow {
     @include build-box($slideshow-width, $slideshow-height);
     text-align: center;
-    &__container{
+    &__container {
         @include flex(column);
+        width: 540pt;
+        height: 370pt;
+        /*border: 1px solid white;*/
+        text-align: center;
+        h1, p {
+
+            margin: 0;
+        }
+        h1 {
+            @include default-header;
+            font-family: $font-subtitle;
+        }
+    }
+    &__button {
+        margin-top: $slideshow-bar-spacing*2;
+    }
+    &__position-circles {
+        @include flex;
+        height: 12pt;
+        width: 55pt;
+        margin-top: 10%;
     }
 }
-.circle{
-    @include build-box(10px,10px);
-    @include border-radius(50%);
-    border: 1px solid black;
 
+.circle {
+    @include build-box(10px, 10px);
+    @include border-radius(50%);
+    margin: 0 2.5pt;
+    padding: 0;
+
+    border: 1px solid $border-light;
+    border-radius: 50%;
+
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+    &:active, &:hover, &:focus {
+        background-color: $highlight;
+        border-color: $highlight;
+
+    }
+}
+.decorative-bar {
+    width: 52pt;
+    height: $slideshow-bar-spacing;
+    margin-bottom: $slideshow-bar-spacing;
+    border-bottom: 0.1px solid $highlight;
 }

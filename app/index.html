@@ -14,7 +14,7 @@
 <header class="page page__section page__section__row page__section__row--purple">
     <nav>
         <figure class="logo">
-            <img src="{{image}}" alt="LOGO">
+            <img src="images/logos/footer_logo.png" alt="LOGO">
         </figure>
         <div class="links links__container">
             <ul>
@@ -38,15 +38,17 @@
     </nav>
     <div class="slideshow slideshow__container">
         <h1>Slideshow Title 1</h1>
-        <div class="decoraive-bar"></div>
+        <div class="decorative-bar">
+
+        </div>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Accusamus amet asperiores illo iste maiores minus nihil provident?
             Architecto cumque, deserunt doloribus eum explicabo impedit minima officiis quisquam recusandae tempora
             velit!
         </p>
-        <div class="button__basic">Learn More</div>
-        <div class="position-circles">
+        <div class="button__highlight--purple slideshow__button">Learn More</div>
+        <div class="slideshow__position-circles">
             <div class="circle">
 
             </div>
@@ -69,104 +71,193 @@
                 maiores minima nesciunt nisi placeat porro,
                 quas quia quod ratione repellat suscipit totam voluptatum.
             </p>
-            <div class="button-basic_white">
+            <div class="button__highlight--white">
                 learn more
             </div>
         </article>
     </section>
-    <section class="video page page__section page__section__row page__section__row--purple">
+    <section class="video video__container page page__section page__section__row page__section__row--purple">
+        <div class="video__icon"><img src="images/icons/play_icon.png" alt="Video arrow">
+            <h3 class="link__highlight">watch our story</h3></div>
         <video width="420">
             <source src="mov_bbb.mp4" type="video/mp4">
             <source src="mov_bbb.ogg" type="video/ogg">
         </video>
     </section>
     <section class="services page page__section page__section__row page__section__row--white">
-        <h1>
-            Expertise
-        </h1>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+        <div class="services__container">
+            <h1>
+                Expertise
+            </h1>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 
-        <div class="services__list">
-            <div class="service">
-                <img src="images/products/dev.png" alt="service.image">
-                <h1>web design & development</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium amet asperiores debitis dolorem, illo ipsam labore
-                    maiores minima nesciunt nisi placeat porro,
-                    quas quia quod ratione repellat suscipit totam voluptatum.</p>
-            </div>
-        </div>
-    </section>
-    <section class="team page page__section page__section__row page__section__row--purple">
-        <div class="title-wrap">
-            <h1>MEET OUR AMAZING TEAM</h1>
-            <h3>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT.</h3>
-            <div class="decoraive-bar"></div>
-        </div>
-        <div class="team-members-spot">
-            <div class="team-member">
-                <img src="images/people/blank.png" alt="member">
-                <div class="team-member__description">
-                    <h1>John Doe</h1>
-                    <h2>Important Position</h2>
+            <div class="services__list">
+                <div class="service">
+                    <img src="images/products/dev.png" alt="service.image">
+                    <h1>web design & development</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium amet asperiores debitis dolorem, illo ipsam labore
+                        maiores minima nesciunt nisi placeat porro,
+                        quas quia quod ratione repellat suscipit totam voluptatum.</p>
+                </div>
+                <div class="service">
+                    <img src="images/products/brand.png" alt="service.image">
+                    <h1>web design & development</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium amet asperiores debitis dolorem, illo ipsam labore
+                        maiores minima nesciunt nisi placeat porro,
+                        quas quia quod ratione repellat suscipit totam voluptatum.</p>
+                </div>
+                <div class="service">
+                    <img src="images/products/game.png" alt="service.image">
+                    <h1>web design & development</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium amet asperiores debitis dolorem, illo ipsam labore
+                        maiores minima nesciunt nisi placeat porro,
+                        quas quia quod ratione repellat suscipit totam voluptatum.</p>
+                </div>
+                <div class="service">
+                    <img src="images/products/love.png" alt="service.image">
+                    <h1>web design & development</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium amet asperiores debitis dolorem, illo ipsam labore
+                        maiores minima nesciunt nisi placeat porro,
+                        quas quia quod ratione repellat suscipit totam voluptatum.</p>
+                </div>
+                <div class="service">
+                    <img src="images/products/mobile.png" alt="service.image">
+                    <h1>web design & development</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium amet asperiores debitis dolorem, illo ipsam labore
+                        maiores minima nesciunt nisi placeat porro,
+                        quas quia quod ratione repellat suscipit totam voluptatum.</p>
+                </div>
+                <div class="service">
+                    <img src="images/products/seo.png" alt="service.image">
+                    <h1>web design & development</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium amet asperiores debitis dolorem, illo ipsam labore
+                        maiores minima nesciunt nisi placeat porro,
+                        quas quia quod ratione repellat suscipit totam voluptatum.</p>
                 </div>
             </div>
         </div>
-        <div class="title-wrap">
-            <h3>Become part of our amazing team!</h3>
-            <div class="button-basic">We are hiring</div>
+    </section>
+    <section class="team team__container page page__section page__section__row page__section__row--purple">
+        <div class="team__wrap">
+            <div class="team__title__wrap">
+                <h1>MEET OUR AMAZING TEAM</h1>
+                <h3>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT.</h3>
+                <div class="decorative-bar"></div>
+            </div>
+            <div class="team-members__container">
+                <div class="team__member">
+                    <img src="images/people/blank.png" alt="member">
+                    <div class="team__member__description">
+                        <h1>John Doe</h1>
+                        <h2>Important Position</h2>
+                    </div>
+                </div>
+                <div class="team__member">
+                    <img src="images/people/blank.png" alt="member">
+                    <div class="team__member__description">
+                        <h1>John Doe</h1>
+                        <h2>Important Position</h2>
+                    </div>
+                </div>
+                <div class="team__member">
+                    <img src="images/people/blank.png" alt="member">
+                    <div class="team__member__description">
+                        <h1>John Doe</h1>
+                        <h2>Important Position</h2>
+                    </div>
+                </div>
+                <div class="team__member">
+                    <img src="images/people/blank.png" alt="member">
+                    <div class="team__member__description">
+                        <h1>John Doe</h1>
+                        <h2>Important Position</h2>
+                    </div>
+                </div>
+                <div class="team__member">
+                    <img src="images/people/blank.png" alt="member">
+                    <div class="team__member__description">
+                        <h1>John Doe</h1>
+                        <h2>Important Position</h2>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="team__title__wrap">
+                <h3>Become part of our amazing team!</h3>
+                <div class="button__highlight--purple">We are hiring</div>
+            </div>
         </div>
     </section>
     <section class="portfolio page page__section page__section__row page__section__row--white">
         <div class="section__row">
-            <div class="title-wrap">
+            <div class="title__wrap">
                 <h1>
-                    {{title}}
+                    Our Works
                 </h1>
 
             </div>
-            <div class="link-wrap">
+            <div class="link__wrap">
 
-                <a href="">
-                    {{link}}
+                <a href="#">
+                    See All Our Projects in dribble
                 </a>
                 <img src="images/icons/forward.png" alt="">
             </div>
         </div>
         <div class="section__row">
             <div class="gallery">
-                <div class="gallery-item" >
-
-                </div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
+                <div class="gallery__item"></div>
             </div>
         </div>
         <div class="section__row">
-            <div class="button-basic">{{button}}</div>
+            <div class="button__highlight--white">Load More</div>
         </div>
     </section>
-    <section class="testimonials page page__section page__section__row page__section__row--purple">
-        <h1>"</h1>
-        <p class="testimonial__body">
-            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
-            Nam nec tellus a odio tincidunt auctor a ornare odio.
-            Sed non mauris vitae erat consequat auctor eu in elit.1
-        </p>
-        <div class="testimonial__author">
-            <h1>Jane Doe</h1>
-            <h2>Important position</h2>
-        </div>
-        <div class="testimonial__gallery">
-            <img src="images/icons/back.png" alt="" class="back">
-            <div class="testimonial-image">
-
-                <img src="images/people/face1.png" alt="">
+    <section
+        class="testimonials testimonials__container page page__section page__section__row page__section__row--purple">
+        <div class="testimonial__wrap">
+            <h1>Title</h1>
+            <p class="testimonial__body">
+                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                elit.
+                Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                Nam nec tellus a odio tincidunt auctor a ornare odio.
+                Sed non mauris vitae erat consequat auctor eu in elit.1
+            </p>
+            <div class="testimonial__author">
+                <h1>Jane Doe</h1>
+                <h2>Important position</h2>
             </div>
-            <img src="images/icons/forward.png" alt="" class="back">
+            <div class="testimonial__gallery">
+                <img src="images/icons/back.png" alt="" class="back">
+                <div class="testimonial__image">
+
+                    <img src="images/people/face1.png" alt="">
+                </div>
+                <img src="images/icons/forward.png" alt="" class="back">
+            </div>
         </div>
     </section>
-    <section class="contact page page__section page__section__row page__section__row--white">
+    <section class="contact-container page page__section page__section__row page__section__row--white">
         <div class="contact-form">
             <h1>give use a good news</h1>
             <form action="">
@@ -176,18 +267,19 @@
                 <textarea type="text" name="message" placeholder="Your Message"></textarea>
 
             </form>
-            <div class="button__basic">
+            <div class="button__highlight--white">
                 submit
             </div>
         </div>
-        <div class="sponsor__container">
+        <div class="sponsors">
             <h1>Our happy clients</h1>
 
-            <div class="sponsor__gallery">
+            <div class="sponsor-gallery">
 
-                <div class="sponsor__images">
+                <div class="sponsor-image-wrap">
                     <img class="sponsor__image" src="images/logos/logo1.png" alt="">
                 </div>
+
 
             </div>
 
@@ -198,6 +290,7 @@
 
 </footer>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
 <script>
     (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
@@ -214,7 +307,7 @@
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
 </script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="scripts/app.js"></script>
 </body>
 </html>
