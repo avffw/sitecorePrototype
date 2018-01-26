@@ -198,6 +198,11 @@
         }
     }
 }
+@mixin footer-box {
+    width: $footer-column-width;
+    height: $footer-column-height;
+
+}
 
 /*
 ====================================

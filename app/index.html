@@ -6,7 +6,7 @@
     <title>Website Title</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -286,8 +286,49 @@
         </div>
     </section>
 </main>
-<footer>
-
+<footer class="footer__container page page__section page__section__row page__section__row--purple">
+    <div class="footer__sections">
+        <div class="footer__description">
+            <img src="images/logos/footer_logo.png" alt="Logo img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea eaque eius eum
+                ipsam nesciunt nulla pariatur quas quasi quidem, quis quisquam, quod recusandae reiciendis reprehenderit sint ut
+                vero voluptate!</p>
+        </div>
+        <div class="contact-details">
+            <h1>Our Studio</h1>
+            <div class="spot__location">
+                <img src="images/icons/location.png" alt="location icon">
+                <p>Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat
+                    11480 - Indonesia</p>
+            </div>
+            <div class="spot__phone">
+                <img src="images/icons/phone351.png" alt="phone icon">
+                <p>(+62) 21-2224 3333</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <h1>Stay in touch</h1>
+            <div class="newsletter__container">
+                <input type="text" name="subscription" placeholder="Subscribe to our newsletter">
+                <div class="button-subscribe">
+                    <img src="images/icons/newsletter_btn.png" alt="">
+                </div>
+            </div>
+            <div class="social-buttons__container">
+                <div class="social-button" *ngFor="let socialIcon of socialIcons">
+                    <img src="images/social/facebook25.png" alt="social icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__extras">
+        <div class="extras">
+            <a href="#">Help</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="copyright">Copyright c 2017 - Someone Special</div>
+    </div>
 </footer>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 

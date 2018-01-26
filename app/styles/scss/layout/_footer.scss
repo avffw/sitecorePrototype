@@ -1,0 +1,127 @@
+
+.footer {
+    &__container {
+      @include flex(column);
+
+        background-image: url("../../../images/bg/footer_bg.png");
+    }
+    &__sections {
+        @include flex;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 900pt;
+        height: 100%;
+    }
+    &__extras {
+        @include flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 900pt;
+    }
+    &__description {
+        @include footer-box;
+    }
+
+}
+
+.contact-details {
+
+    @include footer-box;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.social-media {
+    @extend .contact-details;
+    @include flex(column);
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include footer-box;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    width: 200pt;
+}
+
+.spot {
+    @include flex;
+    &__location {
+        * {
+
+        }
+        p {
+            width: 93%;
+            margin-top: 20px;
+        }
+        img {
+            margin-right: 2%;
+        }
+    }
+    &__phone {
+        @extend .spot__location;
+    }
+
+}
+
+.newsletter__container {
+    @include flex;
+    justify-content: space-between;
+    width: 200pt;
+
+    input {
+        background-color: transparent;
+        border: 0.1px solid $paragraph-color;
+        width: 140pt;
+        height: 30pt;
+    }
+}
+
+.social-buttons__container {
+    @include flex;
+    justify-content: space-between;
+    width: 200pt;
+
+}
+
+.social-button {
+    @include flex(column);
+    cursor: pointer;
+    width: 30pt;
+    height: 30pt;
+    border: 1px solid white;
+    border-radius: 50%;
+    &:hover {
+        background-color: $highlight;
+        border-color: $highlight;
+        opacity: 1;
+    }
+    &:active {
+        background-color: #a09ea5;
+        border-color: #a09ea5;
+    }
+    transition: all 200ms ease;
+
+}
+
+.button-subscribe {
+    @include flex(column);
+    width: 50pt;
+    height: 30pt;
+    background-color: white;
+    opacity: 0.6;
+    cursor: pointer;
+    &:hover {
+        background-color: $highlight;
+        opacity: 1;
+    }
+    &:active {
+        background-color: #029ae0;
+    }
+    transition: all 200ms ease;
+
+}
