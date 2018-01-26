@@ -16,6 +16,10 @@
             font-family: $font-subtitle;
         }
     }
+    &__wrap{
+        @extend .slideshow;
+        @extend .slideshow__container;
+    }
     &__button {
         margin-top: $slideshow-bar-spacing*2;
     }
