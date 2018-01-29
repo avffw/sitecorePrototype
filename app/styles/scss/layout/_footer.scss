@@ -11,6 +11,11 @@
         align-items: stretch;
         width: 900pt;
         height: 100%;
+        *{
+            h1{
+                text-transform: uppercase;
+            }
+        }
     }
     &__extras {
         @include flex;
@@ -31,6 +36,7 @@
         margin: 0;
         padding: 0;
     }
+
 }
 
 .social-media {
@@ -50,20 +56,22 @@
 
 .spot {
     @include flex;
-    &__location {
-        * {
 
-        }
+    &__location {
+        @extend .spot;
         p {
             width: 93%;
             margin-top: 20px;
         }
         img {
-            margin-right: 2%;
+            margin: 0 2% 0 0;
         }
     }
     &__phone {
         @extend .spot__location;
+        img{
+            margin: 5% 2% 0 0;
+        }
     }
 
 }
@@ -78,6 +86,8 @@
         border: 0.1px solid $paragraph-color;
         width: 140pt;
         height: 30pt;
+        color: $paragraph-color;
+        padding-left: 10px;
     }
 }
 

@@ -49,6 +49,9 @@
         position: absolute;
         height: 70px;
         bottom: 25%;
+        img{
+            cursor: pointer;
+        }
     }
     &__image {
         width: 50px;
