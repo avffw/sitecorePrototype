@@ -111,8 +111,8 @@
 
 </header>
 <main>
-    <section class="about about__container page page__section page__section__row page__section__row--white">
-        <figure class="spot__image">
+    <section class="about  page page__section page__section__row page__section__row--white">
+        <div class="about__container"><figure class="spot__image">
             <img src="images/about_left.png" alt="About image">
         </figure>
         <article class="spot__article">
@@ -126,7 +126,7 @@
             <div class="button__highlight--white">
                 learn more
             </div>
-        </article>
+        </article></div>
     </section>
     <section class="video video__container page page__section page__section__row page__section__row--purple">
         <div class="video__icon">
@@ -313,12 +313,12 @@
             <h1>give use a good news</h1>
             <form action="">
                 <input type="text" name="name" placeholder="name">
-                <input type="text" name="email" placeholder="email">
+                <input type="text" name="email" placeholder="email" data-validation="email">
                 <input type="text" name="subject" placeholder="subject">
-                <textarea type="text" name="message" placeholder="Your Message"></textarea>
+                <textarea name="message" placeholder="Your Message"></textarea>
 
             </form>
-            <div class="button__highlight--white">
+            <div class="button__highlight--white" data-name="submit">
                 submit
             </div>
         </div>

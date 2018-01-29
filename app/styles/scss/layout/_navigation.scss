@@ -1,5 +1,6 @@
 nav {
-    @include build-box(100%, auto);
+    margin-top: 20px;
+    @include build-box(960px, auto);
     @include flex(row,nowrap, space-around);
 }
 .links{

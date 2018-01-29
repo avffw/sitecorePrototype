@@ -2,12 +2,15 @@
     &__section {
         @include build-box($page-section-width, $page-section-height);
         min-height: $page-section-min-height;
+
         &__row {
+
             &--white {
                 background-color: white;
                 padding: 20px 0;
             }
             &--purple {
+
                 position: relative;
                 z-index: 1;
                 color: white;
@@ -37,4 +40,9 @@
     z-index: -1;
 
 
+}
+.error{
+    &__message{
+        color: red;
+    }
 }

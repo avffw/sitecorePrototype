@@ -1,11 +1,12 @@
 .slideshow {
     @include build-box($slideshow-width, $slideshow-height);
     text-align: center;
-    position: relative;
+
+
     &__container {
+        top: 10vh;
         @include flex(column);
-        width: 540pt;
-        height: 370pt;
+        @include build-box(500px, 400px);
         /*border: 1px solid white;*/
         text-align: center;
         h1, p {
@@ -37,7 +38,8 @@
         position: absolute;
         height: 12pt;
         width: auto;
-        margin-top: 28%;
+
+        margin-top: 15vh;
         z-index: 2;
     }
 }
