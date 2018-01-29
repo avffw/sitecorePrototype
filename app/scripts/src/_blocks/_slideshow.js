@@ -3,51 +3,98 @@ $(function () {
         elements: {
             slideshows: $('.slideshow__wrap'),
             circlesContainer: $('.slideshow__position-circles'),
-            circles: $(),
-            slideshowChangeRate: 2000
+            slideshowChangeRate: 7000,
+            lastSlide: undefined,
+            positionCircle: $()
         },
         init: function () {
+            theme.slideshow.detectSlides();
+
+        },
+
+        detectSlides: function () {
             var slides = [];
-            var circles = theme.slideshow.elements.circles;
-            var index =0 ;
+            var slidesCount = theme.slideshow.elements.slideshows;
+            for (var i = 0; i < slidesCount.length; i += 1) {
+                slides.push(slidesCount[i]);
 
-            if (!theme.slideshow.elements.slideshows) {
-                console.log('no slideshow slides detected');
-            } else {
-                console.log(theme.slideshow.elements.slideshows.length + ' slides found');
-                var slidesFound = theme.slideshow.elements.slideshows.length;
-
-                for (var i = 0; i < slidesFound; i += 1) {
-
-                    slides.push($(theme.slideshow.elements.slideshows[i]));
-                    if (i === 0) {
-                        slides[i].toggleClass('hidden');
-                    }
-
-                    circles = circles.add('<div class="circle" data-slide="' + i + '"></div>');
-
-
-                }
-                console.log(circles);
-                theme.slideshow.elements.circlesContainer.append(circles);
             }
-            setInterval(function (slides) {
+            theme.slideshow.processSlides(slides);
+            theme.slideshow.addPositionCircles(slides);
+        },
+        processSlides: function (slides) {
+            if (slides && $(slides[0]).hasClass('hidden')) {
+                var firstSlide = $(slides[0]);
 
-                theme.slideshow.swapSlides(slides, index);
+                theme.slideshow.startSlideshow(firstSlide.index(), slides);
+            }
+        },
+        startSlideshow: function (slideIndex, slides) {
+
+
+            theme.slideshow.swapSlides(slideIndex, slides);
+            slideIndex += 1;
+
+            setInterval(function () {
+                if (slides) {
+                    if (slideIndex < slides.length && slideIndex !== 0) {
+                        theme.slideshow.swapSlides(slideIndex, slides);
+                        slideIndex += 1;
+                    }
+                    else {
+                        slideIndex = 0;
+                        theme.slideshow.swapSlides(slideIndex, slides);
+                        slideIndex += 1;
+                    }
+                }
+
             }, theme.slideshow.elements.slideshowChangeRate)
+        },
+        addPositionCircles: function (slides) {
+            var circles = $();
+            for (var i = 0; i < slides.length; i += 1) {
+                circles = circles.add('<div class="circle" data-slide="' + i + '"></div>');
+            }
+            theme.slideshow.createCircle(circles, slides);
+
+        },
+        createCircle: function (circles, slides) {
+            theme.slideshow.elements.circlesContainer.append(circles);
+            theme.slideshow.elements.positionCircle = $('.circle');
+            theme.slideshow.elements.positionCircle.click(function () {
+                theme.slideshow.swapSlides( $(this).attr('data-slide'), slides);
+            })
+        },
+        swapCircles: function (slideIndex, circles) {
+
         },
         onSlideshowChange: function (slides) {
 
         },
-        swapSlides: function (slides, index) {
-            if (index !== 5){
-                slides[index].toggleClass(hidden);
-                index +=1;
-            }else{
-                index = 0;
-            }
+        swapSlides: function (slideIndex, slides) {
+
+            theme.slideshow.showSlide(slideIndex, slides);
+            theme.slideshow.hideSlide(theme.slideshow.elements.lastSlide, slides);
+            theme.slideshow.elements.lastSlide = slideIndex;
 
         },
+        showSlide: function (slideIndex, slides) {
+            setTimeout(function () {
+                console.log(theme.slideshow.elements.positionCircle.length);
+                $(slides[slideIndex]).removeClass('hidden');
+                $(theme.slideshow.elements.positionCircle[slideIndex]).addClass('circle__active');
+
+            }, 500);
+
+
+        }
+
+        ,
+        hideSlide: function (lastSlide, slides) {
+
+            $(slides[lastSlide]).addClass('hidden');
+            $(theme.slideshow.elements.positionCircle[lastSlide]).removeClass('circle__active');
+        }
 
     }
 

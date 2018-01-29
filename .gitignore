@@ -5,3 +5,5 @@ app/styles/styles.css
 .idea
 .idea/*
 dist
+app/scripts/app.js
+/app/scripts/app.js

@@ -19,15 +19,25 @@
     &__wrap{
         @extend .slideshow;
         @extend .slideshow__container;
+        position: absolute;
+        opacity: 1;
+        z-index: 1;
+        -webkit-transition: all 400ms ease;
+        -moz-transition: all 400ms ease;
+        -ms-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease;
     }
     &__button {
         margin-top: $slideshow-bar-spacing*2;
     }
     &__position-circles {
         @include flex;
+        position: absolute;
         height: 12pt;
         width: 55pt;
-        margin-top: 10%;
+        margin-top: 32%;
+        z-index: 2;
     }
 }
 
@@ -44,6 +54,12 @@
     background-color: transparent;
     text-decoration: none;
     &:active, &:hover, &:focus {
+        background-color: $highlight;
+        border-color: $highlight;
+
+    }
+    &__active{
+        @extend .circle;
         background-color: $highlight;
         border-color: $highlight;
 
