@@ -68,9 +68,7 @@ $(function () {
         swapCircles: function (slideIndex, circles) {
 
         },
-        onSlideshowChange: function (slides) {
 
-        },
         swapSlides: function (slideIndex, slides) {
 
             theme.slideshow.showSlide(slideIndex, slides);
@@ -80,7 +78,7 @@ $(function () {
         },
         showSlide: function (slideIndex, slides) {
             setTimeout(function () {
-                console.log(theme.slideshow.elements.positionCircle.length);
+
                 $(slides[slideIndex]).removeClass('hidden');
                 $(theme.slideshow.elements.positionCircle[slideIndex]).addClass('circle__active');
 
