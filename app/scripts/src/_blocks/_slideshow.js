@@ -11,6 +11,7 @@ $(function () {
             resumeSlideTimer: undefined
         },
         init: function () {
+
             theme.slideshow.detectSlides();
 
             theme.slideshow.elements.resumeSlideTimer = theme.slideshow.elements.slideshowChangeRate ;
